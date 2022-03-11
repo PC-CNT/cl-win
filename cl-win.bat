@@ -118,7 +118,7 @@ echo:
 echo:
 echo:
 echo:
-type all.reg
+@REM type all.reg
 
 
 choice > nul
