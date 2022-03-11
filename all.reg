@@ -15,4 +15,22 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "PromptOnSecureDesktop"=dword:00000000
 
-; 
+; 「ペイント3Dで編集」を削除
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.3mf\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.fbx\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.gif\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.glb\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jfif\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.obj\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.ply\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.png\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.stl\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tiff\Shell\3D Edit]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\Shell\3D Edit]
+
+; 「ライブラリに追加」を削除
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\Library Location]

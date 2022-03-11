@@ -61,10 +61,18 @@ if %errorlevel% == 3 (
 if %errorlevel% == 2 (
     goto :REG_MENU
 )
+
+if %errorlevel% == 1 (
+    goto :SOFTWARE
+)
+
 :: ==============ここまでメインメニュー==============
 
 
 :SOFTWARE
+
+:: start https://code.visualstudio.com/sha/download?build=insider^&os=win32-x64-user
+
 goto :MAIN
 
 :REG_MENU
@@ -114,8 +122,6 @@ type all.reg
 
 
 choice > nul
-
-set "__regfilename=%date:/=-%.reg"
 
 if %errorlevel% == 2 (
     goto :REG_MENU
