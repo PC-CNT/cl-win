@@ -18,7 +18,8 @@ if not %errorlevel% == 0 (
 )
 
 title %__name% v%__version%
-mode 80, 32
+mode con: cols=80 lines=32
+powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=3000;$w.BufferSize=$s;}"
 cd /d %~dp0
 
 :: ==============ここからメインメニュー===============
@@ -116,9 +117,15 @@ echo:
 echo:      以下のレジストリを追加します 本当に追加しますか？[Y,N]
 echo:
 echo:
+
+@REM for /f "delims=" %%r in (all.reg) do (
+@REM     echo %%r
+@REM )
+
+findstr /B ";" all.reg
+
 echo:
 echo:
-@REM type all.reg
 
 
 choice > nul
@@ -141,7 +148,7 @@ goto :REG_MENU
 
 :INFO
 cls
-echo: info
+systeminfo
 pause > nul
 goto :MAIN
 
