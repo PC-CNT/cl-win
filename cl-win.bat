@@ -19,7 +19,8 @@ if not %errorlevel% == 0 (
 
 title %__name% v%__version%
 mode con: cols=80 lines=32
-powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=3000;$w.BufferSize=$s;}"
+:: https://maku77.github.io/windows/settings/change-window-size.html
+powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=8000;$w.BufferSize=$s;}"
 cd /d %~dp0
 
 :: ==============ここからメインメニュー===============
@@ -149,6 +150,7 @@ goto :REG_MENU
 :INFO
 cls
 systeminfo
+@REM driverquery /v /fo list
 pause > nul
 goto :MAIN
 
@@ -190,6 +192,9 @@ goto :OTHER
 :CHECKENV
 cls
 set
+echo:
+echo:
+echo:
 if defined %JAVA_HOME% (
     echo: Javaのパスが通ってるようです
 )
