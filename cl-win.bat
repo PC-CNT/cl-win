@@ -283,7 +283,9 @@ if %errorlevel% == 1 (
 )
 
 if %errorlevel% == 2 (
-    goto :REG_ADD_SELECT
+    echo:   工事中……    
+    pause   
+    @REM goto :REG_ADD_SELECT
 )
 
 goto :MAIN
