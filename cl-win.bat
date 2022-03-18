@@ -164,6 +164,7 @@ echo:       ==========================================================
 echo:
 echo:       [1] 環境変数の確認                      
 echo:       [2] エクスプローラー再起動      
+echo:       [3] PC再起動            
 echo:       [0] メインメニューへ戻る                 
 echo:
 echo:       ==========================================================
@@ -171,9 +172,9 @@ echo:
 echo:
 echo:
 
-choice /c:120 /n > nul
+choice /c:1230 /n > nul
 
-if %errorlevel% == 3 (
+if %errorlevel% == 4 (
     goto :MAIN
 )
 
@@ -185,6 +186,11 @@ if %errorlevel% == 2 (
     taskkill /IM explorer.exe /F
     explorer
     goto :OTHER
+)
+
+if %errorlevel% == 3 (
+    shutdown /r /t 0
+    goto :EXIT
 )
 
 goto :OTHER
