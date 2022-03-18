@@ -21,6 +21,8 @@ title %__name% v%__version%
 mode con: cols=80 lines=32
 :: https://maku77.github.io/windows/settings/change-window-size.html
 powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=8000;$w.BufferSize=$s;}"
+@echo off
+@setlocal DisableDelayedExpansion
 cd /d %~dp0
 
 :: ==============ここからメインメニュー===============
@@ -71,12 +73,189 @@ if %errorlevel% == 1 (
 :: ==============ここまでメインメニュー==============
 
 
+
+:: =============ここからソフトウェア関連===============
 :SOFTWARE
+cls
+
+where curl > nul
+if not %errorlevel% == 0 (
+    set "CURL_EXIST=FALSE"
+) else (
+    set "CURL_EXIST=TRUE"
+)
 
 :: start https://code.visualstudio.com/sha/download?build=insider^&os=win32-x64-user
 
-goto :MAIN
+echo:
+echo:
+echo:
+echo:      ==========================================================
+echo:
+echo:      [1] Visual Studio Code 
+echo:      [2] Google Chrome 
+echo:      
+echo:      [0] 戻る 
+echo:
+echo:      ==========================================================
 
+choice /c:120 /n > nul
+
+if %errorlevel% == 3 (
+    goto :MAIN
+)
+
+if %errorlevel% == 1 (
+    goto :VS_CODE
+)
+
+if %errorlevel% == 2 (
+    goto :CHROME
+)
+
+
+pause > nul
+
+goto :MAIN
+:: =============ここまでソフトウェア関連===============
+
+
+:: ==================ここからVisual Studio Code====================
+:VS_CODE
+cls
+
+echo:
+echo:
+echo:
+echo:      ==========================================================
+echo:
+echo:      [1] Visual Studio Code
+echo:      [2] Visual Studio Code Insiders
+echo:
+echo:      [0] 戻る
+echo:
+echo:      ==========================================================
+echo:
+
+choice /c:120 /n > nul
+
+if %errorlevel% == 3 (
+    goto :SOFTWARE
+)
+
+if %errorlevel% == 1 (
+    set "BUILD=stable"
+)
+
+if %errorlevel% == 2 (
+    set "BUILD=insider"
+)
+
+
+cls
+
+echo:
+echo:
+echo:
+echo:      ==========================================================
+echo:
+echo:      [1] User Installer   
+echo:      [2] System Installer 
+echo:
+echo:      [0] 戻る
+echo:
+echo:      ==========================================================
+echo:
+
+choice /c:120 /n > nul
+
+if %errorlevel% == 3 (
+    goto :SOFTWARE
+)
+
+
+
+if %errorlevel% == 1 (
+    set "INSTALL_TYPE=win32-x64-user"
+)
+
+if %errorlevel% == 2 (
+    set "INSTALL_TYPE=win32-x64"
+)
+
+cls
+
+
+echo:
+echo:
+echo:
+echo:      ==========================================================
+echo:
+echo:      Visual Studio Code %BUILD% （ %INSTALL_TYPE% ）  
+echo:      をダウンロード、インストールします。よろしいですか？[y/n]      
+echo:      https://code.visualstudio.com/sha/download?build=%BUILD%^&os=%INSTALL_TYPE%
+echo:
+echo:      ==========================================================
+echo:
+
+
+choice > nul
+
+if %errorlevel% == 2 (
+    goto :SOFTWARE
+)
+
+if %errorlevel% == 1 (
+    @REM curl -L -o vscodeinstaller.exe https://go.microsoft.com/fwlink/LinkID=760868
+    mkdir C:\temp
+    if %CURL_EXIST% == TRUE (
+        curl -L -o "C:\temp\vscodeinstaller.exe" https://code.visualstudio.com/sha/download?build=%BUILD%^&os=%INSTALL_TYPE%
+    )
+    start C:\temp\vscodeinstaller.exe
+)
+
+pause
+
+goto :SOFTWARE
+:: =================ここまでVisual Studio Code====================
+
+
+:: =================ここからGoogle Chrome====================
+:CHROME
+cls
+
+echo:
+echo:
+echo:
+echo:      ==========================================================
+echo:
+echo:      [1] Stable   
+echo:      [2] Beta     
+echo:      [3] Dev      
+echo:      [4] Canary   
+echo:
+echo:      [0] 戻る
+echo:
+echo:      ==========================================================
+echo:
+
+choice /c:12340 /n > nul
+
+if %errorlevel% == 5 (
+    goto :SOFTWARE
+)
+
+
+@REM mkdir C:\temp
+@REM curl -L -o "C:\temp\ChromeSetup.exe" https://dl.google.com/tag/s/ap=x64-stable-statsdef_1/update2/installers/ChromeSetup.exe
+
+pause 
+
+goto :SOFTWARE
+:: =================ここまでGoogle Chrome====================
+
+
+:: ==================ここからレジストリ=====================
 :REG_MENU
 cls
 echo:
@@ -108,6 +287,8 @@ if %errorlevel% == 2 (
 )
 
 goto :MAIN
+:: ==================ここまでレジストリ=====================
+
 
 
 :: ====================--ここからレジストリ追加--=============================
