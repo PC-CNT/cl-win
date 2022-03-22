@@ -27,7 +27,7 @@ cd /d %~dp0
 color 07
 
 :: ==============ここからメインメニュー===============
-:MAIN
+:__MAIN
 cls
 echo:
 echo:
@@ -52,11 +52,12 @@ echo:
 choice /c:12340 /n > nul
 
 if %errorlevel% == 5 (
-    goto :EXIT
+    goto :__EXIT
 )
 
 if %errorlevel% == 4 (
-    goto :INFO
+    call :INFO
+    goto :__MAIN
 )
 
 if %errorlevel% == 3 (
@@ -68,15 +69,17 @@ if %errorlevel% == 2 (
 )
 
 if %errorlevel% == 1 (
-    goto :SOFTWARE
+    goto :__SOFTWARE
 )
+
+goto :__MAIN
 
 :: ==============ここまでメインメニュー==============
 
 
 
 :: =============ここからソフトウェア関連===============
-:SOFTWARE
+:__SOFTWARE
 cls
 
 
@@ -105,7 +108,7 @@ echo:      ==========================================================
 choice /c:120 /n > nul
 
 if %errorlevel% == 3 (
-    goto :MAIN
+    goto :__MAIN
 )
 
 if %errorlevel% == 1 (
@@ -119,7 +122,7 @@ if %errorlevel% == 2 (
 
 pause > nul
 
-goto :MAIN
+goto :__MAIN
 :: =============ここまでソフトウェア関連===============
 
 
@@ -143,7 +146,7 @@ echo:
 choice /c:120 /n > nul
 
 if %errorlevel% == 3 (
-    goto :SOFTWARE
+    goto :__SOFTWARE
 )
 
 if %errorlevel% == 1 (
@@ -173,7 +176,7 @@ echo:
 choice /c:120 /n > nul
 
 if %errorlevel% == 3 (
-    goto :SOFTWARE
+    goto :__SOFTWARE
 )
 
 
@@ -207,7 +210,7 @@ echo:
 choice > nul
 
 if %errorlevel% == 2 (
-    goto :SOFTWARE
+    goto :__SOFTWARE
 )
 
 if %errorlevel% == 1 (
@@ -223,7 +226,7 @@ if %errorlevel% == 1 (
 
 pause
 
-goto :SOFTWARE
+goto :__SOFTWARE
 :: =================ここまでVisual Studio Code====================
 
 
@@ -249,7 +252,7 @@ echo:
 choice /c:12340 /n > nul
 
 if %errorlevel% == 5 (
-    goto :SOFTWARE
+    goto :__SOFTWARE
 )
 
 
@@ -258,7 +261,7 @@ if %errorlevel% == 5 (
 
 pause 
 
-goto :SOFTWARE
+goto :__SOFTWARE
 :: =================ここまでGoogle Chrome====================
 
 
@@ -282,7 +285,7 @@ echo:
 choice /c:120 /n > nul
 
 if %errorlevel% == 3 (
-    goto :MAIN
+    goto :__MAIN
 )
 
 if %errorlevel% == 1 (
@@ -295,7 +298,7 @@ if %errorlevel% == 2 (
     @REM goto :REG_ADD_SELECT
 )
 
-goto :MAIN
+goto :__MAIN
 :: ==================ここまでレジストリ=====================
 
 
@@ -342,7 +345,9 @@ cls
 systeminfo
 @REM driverquery /v /fo list
 pause > nul
-goto :MAIN
+@REM goto :__MAIN
+exit /b
+:: exit と exit /b で挙動が変わる
 
 
 :OTHER
@@ -365,7 +370,7 @@ echo:
 choice /c:1230 /n > nul
 
 if %errorlevel% == 4 (
-    goto :MAIN
+    goto :__MAIN
 )
 
 if %errorlevel% == 1 (
@@ -380,7 +385,7 @@ if %errorlevel% == 2 (
 
 if %errorlevel% == 3 (
     shutdown /r /t 0
-    goto :EXIT
+    goto :__EXIT
 )
 
 goto :OTHER
@@ -400,7 +405,7 @@ goto :OTHER
 
 
 :: =============終了処理=============
-:EXIT
+:__EXIT
 echo: 終了します……
 timeout /t 2 /nobreak >nul
 exit /b
