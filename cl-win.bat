@@ -24,6 +24,7 @@ powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=800
 @echo off
 @setlocal DisableDelayedExpansion
 cd /d %~dp0
+color 07
 
 :: ==============ここからメインメニュー===============
 :MAIN
@@ -78,6 +79,8 @@ if %errorlevel% == 1 (
 :SOFTWARE
 cls
 
+
+:: curlはv1803以降にしか付属してないらしい
 where curl > nul
 if not %errorlevel% == 0 (
     set "CURL_EXIST=FALSE"
@@ -183,6 +186,8 @@ if %errorlevel% == 2 (
     set "INSTALL_TYPE=win32-x64"
 )
 
+set "_URL=https://code.visualstudio.com/sha/download?build=%BUILD%&os=%INSTALL_TYPE%"
+
 cls
 
 
@@ -192,8 +197,8 @@ echo:
 echo:      ==========================================================
 echo:
 echo:      Visual Studio Code %BUILD% （ %INSTALL_TYPE% ）  
-echo:      をダウンロード、インストールします。よろしいですか？[y/n]      
-echo:      https://code.visualstudio.com/sha/download?build=%BUILD%^&os=%INSTALL_TYPE%
+echo:      をダウンロード、インストールします。よろしいですか？[y/n] 
+echo:      "%_URL%"
 echo:
 echo:      ==========================================================
 echo:
@@ -206,10 +211,12 @@ if %errorlevel% == 2 (
 )
 
 if %errorlevel% == 1 (
-    @REM curl -L -o vscodeinstaller.exe https://go.microsoft.com/fwlink/LinkID=760868
     mkdir C:\temp
     if %CURL_EXIST% == TRUE (
-        curl -L -o "C:\temp\vscodeinstaller.exe" https://code.visualstudio.com/sha/download?build=%BUILD%^&os=%INSTALL_TYPE%
+        curl -L -o "C:\temp\vscodeinstaller.exe" "%_URL%"
+    ) else (
+        :: https://stackoverflow.com/questions/54917110
+        powershell "Invoke-WebRequest '%_URL%' -OutFile C:\temp\vscodeinstaller.exe"
     )
     start C:\temp\vscodeinstaller.exe
 )
