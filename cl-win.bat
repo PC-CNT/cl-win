@@ -56,16 +56,16 @@ if %errorlevel% == 5 (
 )
 
 if %errorlevel% == 4 (
-    call :INFO
+    call :__INFO
     goto :__MAIN
 )
 
 if %errorlevel% == 3 (
-    goto :OTHER 
+    goto :__OTHER 
 )
 
 if %errorlevel% == 2 (
-    goto :REG_MENU
+    goto :__REG_MENU
 )
 
 if %errorlevel% == 1 (
@@ -112,11 +112,11 @@ if %errorlevel% == 3 (
 )
 
 if %errorlevel% == 1 (
-    goto :VS_CODE
+    goto :__VS_CODE
 )
 
 if %errorlevel% == 2 (
-    goto :CHROME
+    goto :__CHROME
 )
 
 
@@ -127,7 +127,7 @@ goto :__MAIN
 
 
 :: ==================ここからVisual Studio Code====================
-:VS_CODE
+:__VS_CODE
 cls
 
 echo:
@@ -231,7 +231,7 @@ goto :__SOFTWARE
 
 
 :: =================ここからGoogle Chrome====================
-:CHROME
+:__CHROME
 cls
 
 echo:
@@ -266,7 +266,7 @@ goto :__SOFTWARE
 
 
 :: ==================ここからレジストリ=====================
-:REG_MENU
+:__REG_MENU
 cls
 echo:
 echo:
@@ -289,7 +289,7 @@ if %errorlevel% == 3 (
 )
 
 if %errorlevel% == 1 (
-    goto :REG_ADD_ALL
+    goto :__REG_ADD_ALL
 )
 
 if %errorlevel% == 2 (
@@ -304,7 +304,7 @@ goto :__MAIN
 
 
 :: ====================--ここからレジストリ追加--=============================
-:REG_ADD_ALL
+:__REG_ADD_ALL
 cls
 echo:
 echo:
@@ -325,7 +325,7 @@ echo:
 choice > nul
 
 if %errorlevel% == 2 (
-    goto :REG_MENU
+    goto :__REG_MENU
 )
 
 if %errorlevel% == 1 (
@@ -336,11 +336,11 @@ if %errorlevel% == 1 (
     pause > nul
 )
 
-goto :REG_MENU
+goto :__REG_MENU
 :: ====================--ここまでレジストリ追加--=============================
 
 
-:INFO
+:__INFO
 cls
 systeminfo
 @REM driverquery /v /fo list
@@ -350,7 +350,7 @@ exit /b
 :: exit と exit /b で挙動が変わる
 
 
-:OTHER
+:__OTHER
 cls
 echo:
 echo:
@@ -374,13 +374,13 @@ if %errorlevel% == 4 (
 )
 
 if %errorlevel% == 1 (
-    goto :CHECKENV
+    goto :__CHECKENV
 )
 
 if %errorlevel% == 2 (
     taskkill /IM explorer.exe /F
     explorer
-    goto :OTHER
+    goto :__OTHER
 )
 
 if %errorlevel% == 3 (
@@ -388,9 +388,9 @@ if %errorlevel% == 3 (
     goto :__EXIT
 )
 
-goto :OTHER
+goto :__OTHER
 
-:CHECKENV
+:__CHECKENV
 cls
 set
 echo:
@@ -400,7 +400,7 @@ if defined %JAVA_HOME% (
     echo: Javaのパスが通ってるようです
 )
 pause > nul
-goto :OTHER
+goto :__OTHER
 
 
 
