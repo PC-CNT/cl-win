@@ -20,7 +20,7 @@ if not %errorlevel% == 0 (
 title %__name% v%__version%
 mode con: cols=80 lines=32
 :: https://maku77.github.io/windows/settings/change-window-size.html
-powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=8000;$w.BufferSize=$s;}"
+powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=6000;$w.BufferSize=$s;}"
 @echo off
 @setlocal DisableDelayedExpansion
 cd /d %~dp0
@@ -29,21 +29,21 @@ color 07
 :: ==============ここからメインメニュー===============
 :__MAIN
 cls
-echo:
-echo:
-echo:
-echo:       ==========================================================
-echo:
-echo:       [1] ソフトウェア関連
-echo:       [2] レジストリ関連
-echo:       [3] その他           
-echo:       [4] 情報
-echo:       [0] 終了                                
-echo:
-echo:       ==========================================================
-echo:
-echo:
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
+echo:      [1] ソフトウェア関連
+echo:      [2] レジストリ関連
+echo:      [3] その他           
+echo:      [4] 情報
+echo:      [0] 終了                                
+echo:      
+echo:      ==================================================================
+echo:      
+echo:      
+echo:      
 
 
 :: choiceの仕様に苦戦した
@@ -96,17 +96,17 @@ if not %errorlevel% == 0 (
 
 :: start https://code.visualstudio.com/sha/download?build=insider^&os=win32-x64-user
 
-echo:
-echo:
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
 echo:      [1] Visual Studio Code 
 echo:      [2] Google Chrome 
 echo:      
 echo:      [0] 戻る 
-echo:
-echo:      ==========================================================
+echo:      
+echo:      ==================================================================
 
 choice /c:120 /n > nul
 
@@ -134,18 +134,18 @@ exit /b
 :__VS_CODE
 cls
 
-echo:
-echo:
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
 echo:      [1] Visual Studio Code
 echo:      [2] Visual Studio Code Insiders
-echo:
+echo:      
 echo:      [0] 戻る
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      ==================================================================
+echo:      
 
 choice /c:120 /n > nul
 
@@ -164,18 +164,18 @@ if %errorlevel% == 2 (
 
 cls
 
-echo:
-echo:
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
 echo:      [1] User Installer   
 echo:      [2] System Installer 
-echo:
+echo:      
 echo:      [0] 戻る
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      ==================================================================
+echo:      
 
 choice /c:120 /n > nul
 
@@ -198,17 +198,17 @@ set "_URL=https://code.visualstudio.com/sha/download?build=%__BUILD%&os=%INSTALL
 cls
 
 
-echo:
-echo:
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
 echo:      Visual Studio Code %__BUILD% （ %INSTALL_TYPE% ）  
 echo:      をダウンロード、インストールします。よろしいですか？[y/n] 
 echo:      "%_URL%"
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      ==================================================================
+echo:      
 
 
 choice > nul
@@ -238,20 +238,20 @@ goto :__SOFTWARE
 :__CHROME
 cls
 
-echo:
-echo:
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
 echo:      [1] Stable   
 echo:      [2] Beta     
 echo:      [3] Dev      
 echo:      [4] Canary   
-echo:
+echo:      
 echo:      [0] 戻る
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      ==================================================================
+echo:      
 
 choice /c:12340 /n > nul
 
@@ -272,19 +272,19 @@ goto :__SOFTWARE
 :: ==================ここからレジストリ=====================
 :__REG_MENU
 cls
-echo:
-echo:
-echo:
-echo:      ==========================================================
-echo:
+echo:      
+echo:      
+echo:      
+echo:      ==================================================================
+echo:      
 echo:      [1] レジストリを追加（一括） 
 echo:      [2] レジストリを追加（選択） 
 echo:      [0] メインメニューへ戻る 
-echo:
-echo:      ==========================================================
-echo:
-echo:
-echo:
+echo:      
+echo:      ==================================================================
+echo:      
+echo:      
+echo:      
 
 choice /c:120 /n > nul
 
@@ -312,11 +312,11 @@ exit /b
 :: ====================--ここからレジストリ追加--=============================
 :__REG_ADD_ALL
 cls
-echo:
-echo:
+echo:      
+echo:      
 echo:      以下のレジストリを追加します 本当に追加しますか？[Y,N]
-echo:
-echo:
+echo:      
+echo:      
 
 @REM for /f "delims=" %%r in (all.reg) do (
 @REM     echo %%r
@@ -358,20 +358,20 @@ exit /b
 
 :__OTHER
 cls
-echo:
-echo:
-echo:
-echo:       ==========================================================
-echo:
+echo:       
+echo:       
+echo:       
+echo:       ==================================================================
+echo:       
 echo:       [1] 環境変数の確認                      
 echo:       [2] エクスプローラー再起動      
 echo:       [3] PC再起動            
 echo:       [0] メインメニューへ戻る                 
-echo:
-echo:       ==========================================================
-echo:
-echo:
-echo:
+echo:       
+echo:       ==================================================================
+echo:       
+echo:       
+echo:       
 
 choice /c:1230 /n > nul
 
