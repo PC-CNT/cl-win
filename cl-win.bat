@@ -466,7 +466,7 @@ echo:
 echo:      以下の作業を行います。よろしいですか？[y,n]
 echo:      
 echo:      ・Diagnostics Tracking Service（データ送信）の停止
-echo:      
+echo:      ・dmwappushsvc（データ送信）の停止
 echo:      
 echo:      
 choice > nul
