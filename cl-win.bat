@@ -17,7 +17,13 @@ if not %errorlevel% == 0 (
     exit /b
 )
 
+
 title %__name% v%__version%
+
+:: ==============ここからメインメニュー===============
+:__MAIN
+
+
 mode con: cols=80 lines=32
 :: https://maku77.github.io/windows/settings/change-window-size.html
 powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=6000;$w.BufferSize=$s;}"
@@ -26,8 +32,7 @@ powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=600
 cd /d %~dp0
 color 07
 
-:: ==============ここからメインメニュー===============
-:__MAIN
+
 cls
 echo:      
 echo:      
@@ -348,6 +353,8 @@ goto :__REG_MENU
 
 :__INFO
 cls
+mode con: cols=120 lines=32
+powershell -command "&{$h=Get-Host;$w=$h.UI.RawUI;$s=$w.BufferSize;$s.height=6000;$w.BufferSize=$s;}"
 systeminfo
 @REM driverquery /v /fo list
 pause > nul
