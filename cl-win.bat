@@ -61,15 +61,18 @@ if %errorlevel% == 4 (
 )
 
 if %errorlevel% == 3 (
-    goto :__OTHER 
+    call :__OTHER
+    goto :__MAIN
 )
 
 if %errorlevel% == 2 (
-    goto :__REG_MENU
+    call :__REG_MENU
+    goto :__MAIN
 )
 
 if %errorlevel% == 1 (
-    goto :__SOFTWARE
+    call :__SOFTWARE
+    goto :__MAIN
 )
 
 goto :__MAIN
@@ -122,7 +125,8 @@ if %errorlevel% == 2 (
 
 pause > nul
 
-goto :__MAIN
+@REM goto :__MAIN
+exit /b
 :: =============ここまでソフトウェア関連===============
 
 
@@ -150,11 +154,11 @@ if %errorlevel% == 3 (
 )
 
 if %errorlevel% == 1 (
-    set "BUILD=stable"
+    set "__BUILD=stable"
 )
 
 if %errorlevel% == 2 (
-    set "BUILD=insider"
+    set "__BUILD=insider"
 )
 
 
@@ -189,7 +193,7 @@ if %errorlevel% == 2 (
     set "INSTALL_TYPE=win32-x64"
 )
 
-set "_URL=https://code.visualstudio.com/sha/download?build=%BUILD%&os=%INSTALL_TYPE%"
+set "_URL=https://code.visualstudio.com/sha/download?build=%__BUILD%&os=%INSTALL_TYPE%"
 
 cls
 
@@ -199,7 +203,7 @@ echo:
 echo:
 echo:      ==========================================================
 echo:
-echo:      Visual Studio Code %BUILD% （ %INSTALL_TYPE% ）  
+echo:      Visual Studio Code %__BUILD% （ %INSTALL_TYPE% ）  
 echo:      をダウンロード、インストールします。よろしいですか？[y/n] 
 echo:      "%_URL%"
 echo:
@@ -298,7 +302,9 @@ if %errorlevel% == 2 (
     @REM goto :REG_ADD_SELECT
 )
 
-goto :__MAIN
+@REM goto :__MAIN
+exit /b
+
 :: ==================ここまでレジストリ=====================
 
 
@@ -388,7 +394,9 @@ if %errorlevel% == 3 (
     goto :__EXIT
 )
 
-goto :__OTHER
+@REM goto :__OTHER
+
+exit /b
 
 :__CHECKENV
 cls
@@ -408,4 +416,4 @@ goto :__OTHER
 :__EXIT
 echo: 終了します……
 timeout /t 2 /nobreak >nul
-exit /b
+exit
