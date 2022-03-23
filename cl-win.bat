@@ -362,7 +362,7 @@ pause > nul
 exit /b
 :: exit と exit /b で挙動が変わる
 
-
+:: =============================--↓↓↓その他↓↓↓--=============================
 :__OTHER
 cls
 echo:       
@@ -373,6 +373,7 @@ echo:
 echo:       [1] 環境変数の確認                      
 echo:       [2] エクスプローラー再起動      
 echo:       [3] PC再起動            
+echo:       [4] 
 echo:       [0] メインメニューへ戻る                 
 echo:       
 echo:       ==================================================================
@@ -380,9 +381,9 @@ echo:
 echo:       
 echo:       
 
-choice /c:1230 /n > nul
+choice /c:12340 /n > nul
 
-if %errorlevel% == 4 (
+if %errorlevel% == 5 (
     goto :__MAIN
 )
 
@@ -401,9 +402,16 @@ if %errorlevel% == 3 (
     goto :__EXIT
 )
 
+if %errorlevel% == 4 (
+    call :__OPTIMIZE
+    goto :__OTHER
+)
+
 @REM goto :__OTHER
 
 exit /b
+:: =============================--↑↑↑その他↑↑↑--=============================
+
 
 :__CHECKENV
 cls
@@ -416,6 +424,64 @@ if defined %JAVA_HOME% (
 )
 pause > nul
 goto :__OTHER
+
+
+
+:__OPTIMIZE
+cls
+echo:       
+echo:       
+echo:       
+echo:       ==================================================================
+echo:       
+echo:       [1] データ送信を停止                      
+echo:       [2] 
+echo:       [0] 「その他」トップへ戻る                 
+echo:       
+echo:       ==================================================================
+echo:       
+echo:       
+echo:       
+
+
+choice /c:12340 /n > nul
+
+if %errorlevel% == 5 (
+    goto :__OTHER
+)
+
+if %errorlevel% == 1 (
+    call :__A____MS
+    goto :__OPTIMIZE
+)
+
+exit /b
+
+:: =============================--↓↓↓スパイウェア停止↓↓↓--=============================
+:__A____MS
+cls
+echo:      
+echo:      
+echo:      
+echo:      以下の作業を行います。よろしいですか？[y,n]
+echo:      
+echo:      ・Diagnostics Tracking Service（データ送信）の停止
+echo:      
+echo:      
+echo:      
+choice > nul
+if %errorlevel% == 2 (
+    goto :__OPTIMIZE
+)
+if %errorlevel% == 1 (
+    sc stop Diagtrack
+    sc delete Diagtrack
+    sc stop dmwappushservice
+    pause
+)
+
+exit /b
+:: =============================--↑↑↑スパイウェア停止↑↑↑--=============================
 
 
 
