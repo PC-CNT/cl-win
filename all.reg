@@ -1,13 +1,13 @@
 Windows Registry Editor Version 5.00
 
-; 3D オブジェクトの削除
+;      3D オブジェクトの削除
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
 
-; 拡張子表示
+;      拡張子表示
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "HideFileExt"=dword:00000000
 
-; UACの暗転を消す
+;      UACの暗転を消す
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "ConsentPromptBehaviorAdmin"=dword:00000005
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
@@ -15,7 +15,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "PromptOnSecureDesktop"=dword:00000000
 
-; 「ペイント3Dで編集」を削除
+;      「ペイント3Dで編集」を削除
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.3mf\Shell\3D Edit]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\Shell\3D Edit]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.fbx\Shell\3D Edit]
@@ -32,10 +32,10 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.tiff\Shell\3D Edit]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\Shell\3D Edit]
 
-; 「ライブラリに追加」を削除
+;      「ライブラリに追加」を削除
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\Library Location]
 
-; 「デスクトップの背景として設定」を削除
+;      「デスクトップの背景として設定」を削除
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.avci\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.avcs\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.avifs\Shell\setdesktopwallpaper]
@@ -56,13 +56,17 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.wdp\Shell\setdesktopwallpaper]
 
-; 隠しファイル表示
+;      隠しファイル表示
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "Hidden"=dword:00000001
 
-; ダークモード
+;      ダークモード
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000000
 
-; 「送る」を削除
+;      「送る」を削除
 [-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]
+
+;      高速スタートアップを無効化
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Power]
+"HiberbootEnabled"=dword:00000000
