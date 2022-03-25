@@ -70,3 +70,17 @@ Windows Registry Editor Version 5.00
 ;      高速スタートアップを無効化
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Power]
 "HiberbootEnabled"=dword:00000000
+
+;      Windows Media Player関連のコンテキストメニューを削除
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.3G2\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.3GP\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.ADTS\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.AIFF\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.ASF\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.ASX\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.AU\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.AVI\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.CDA\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.FLAC\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.M2TS\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.M3U\shell\Enqueue]
