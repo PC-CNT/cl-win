@@ -84,3 +84,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\WMP11.AssocFile.FLAC\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\WMP11.AssocFile.M2TS\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\WMP11.AssocFile.M3U\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\Stack.Audio\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\Stack.Audio\shell\Play]
+[-HKEY_CLASSES_ROOT\Stack.Image\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\Stack.Image\shell\Play]
