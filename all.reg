@@ -88,3 +88,6 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Stack.Audio\shell\Play]
 [-HKEY_CLASSES_ROOT\Stack.Image\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\Stack.Image\shell\Play]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\Directory.Image]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\audio]
