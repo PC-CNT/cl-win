@@ -435,7 +435,7 @@ echo:
 echo:       ==================================================================
 echo:       
 echo:       [1] データ送信を停止                      
-echo:       [2] 
+echo:       [2] 一時ファイルを削除  
 echo:       [0] 「その他」トップへ戻る                 
 echo:       
 echo:       ==================================================================
@@ -452,6 +452,11 @@ if %errorlevel% == 5 (
 
 if %errorlevel% == 1 (
     call :__A____MS
+    goto :__OPTIMIZE
+)
+
+if %errorlevel% == 2 (
+    call :__DEL_TEMP
     goto :__OPTIMIZE
 )
 
@@ -482,6 +487,48 @@ if %errorlevel% == 1 (
 
 exit /b
 :: =============================--↑↑↑スパイウェア停止↑↑↑--=============================
+
+
+:: =============
+:__DEL_TEMP
+cls
+echo:      
+echo:      
+echo:      
+echo:      以下の作業を行います。よろしいですか？[y,n]
+echo:      
+echo:      ・pipのキャッシュを削除
+echo:      ・C:\\Windows\servicing\LCU\以下を削除
+echo:      ・Dism.exeでのクリーンアップ
+echo:      
+echo:      
+choice > nul
+if %errorlevel% == 2 (
+    goto :__OPTIMIZE
+)
+if %errorlevel% == 1 (
+    where pip > nul
+    if %errorlevel% == 0 (
+        :: pip cache purge
+        :: ↑これ最近のpipじゃないと使えないらしい
+        rmdir /s /q %LOCALAPPDATA%\pip\Cache
+    )
+
+    rmdir /s /q C:\\Windows\servicing\LCU\
+
+    Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+
+)
+
+
+
+
+pause > nul
+
+exit /b
+:: =============
+
+
 
 
 
