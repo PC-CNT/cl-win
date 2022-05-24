@@ -91,3 +91,8 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio]
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\Directory.Image]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\audio]
+
+
+;      jpegの拡張子を.jfifから.jpgに変更
+[HKEY_CURRENT_USER\SOFTWARE\Classes\MIME\Database\Content Type\image/jpeg]
+"Extension"=".jpg"
