@@ -7,7 +7,7 @@
 
 chcp 65001 > nul
 set "__name=私的Win10環境構築ツール（仮）"
-set "__version=1.01"
+set "__version=1.02"
 
 
 :: ====管理者権限の確認====
@@ -398,8 +398,14 @@ if %errorlevel% == 2 (
 )
 
 if %errorlevel% == 3 (
-    shutdown /r /t 0
-    goto :__EXIT
+    echo:       再起動しますか？[y,n]
+    choice > nul
+    if %errorlevel% == 2 (
+        goto :__OTHER
+    )
+    if %errorlevel% == 1 (
+        shutdown /r /t 0
+    )
 )
 
 if %errorlevel% == 4 (
@@ -407,7 +413,7 @@ if %errorlevel% == 4 (
     goto :__OTHER
 )
 
-@REM goto :__OTHER
+goto :__OTHER
 
 exit /b
 :: =============================--↑↑↑その他↑↑↑--=============================
