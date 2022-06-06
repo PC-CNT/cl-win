@@ -96,3 +96,10 @@ Windows Registry Editor Version 5.00
 ;      jpegの拡張子を.jfifから.jpgに変更
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MIME\Database\Content Type\image/jpeg]
 "Extension"=".jpg"
+
+
+;      特殊な拡張子の表示
+[HKEY_CLASSES_ROOT\lnkfile]
+"NeverShowExt"=-
+[HKEY_CLASSES_ROOT\IE.AssocFile.URL]
+"NeverShowExt"=-
