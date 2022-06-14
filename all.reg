@@ -103,3 +103,10 @@ Windows Registry Editor Version 5.00
 "NeverShowExt"=-
 [HKEY_CLASSES_ROOT\IE.AssocFile.URL]
 "NeverShowExt"=-
+
+;      「クイック アクセスにピン留め」を削除
+[-HKEY_CLASSES_ROOT\Folder\shell\pintohome]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\pintohome]
+
+;      「共有」を削除
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing]
