@@ -506,6 +506,7 @@ echo:
 echo:      ・pipのキャッシュを削除
 echo:      ・C:\\Windows\servicing\LCU\以下を削除
 echo:      ・Dism.exeでのクリーンアップ
+echo:      ・.gradleのキャッシュを削除
 echo:      
 echo:      
 choice > nul
@@ -523,6 +524,8 @@ if %errorlevel% == 1 (
     rmdir /s /q C:\\Windows\servicing\LCU\
 
     Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+
+    rmdir /s /q %USERPROFILE%\.gradle\caches
 
 )
 
