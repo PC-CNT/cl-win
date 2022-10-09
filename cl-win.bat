@@ -519,6 +519,8 @@ if %errorlevel% == 1 (
         :: pip cache purge
         :: ↑これ最近のpipじゃないと使えないらしい
         rmdir /s /q %LOCALAPPDATA%\pip\Cache
+    ) else (
+        pip cache purge
     )
 
     rmdir /s /q C:\\Windows\servicing\LCU\
