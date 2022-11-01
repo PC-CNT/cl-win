@@ -127,3 +127,9 @@ Windows Registry Editor Version 5.00
 "LegacyDisable"=""
 [HKEY_CLASSES_ROOT\Drive\shell\encrypt-bde-elev]
 "LegacyDisable"=""
+
+;       「Enhance Pointer Precision」を無効化
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
