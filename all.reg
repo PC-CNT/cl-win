@@ -135,3 +135,7 @@ Windows Registry Editor Version 5.00
 "MouseSpeed"="0"
 "MouseThreshold1"="0"
 "MouseThreshold2"="0"
+
+;       「ウインドウのスナップ」を無効化
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WindowArrangementActive"="0"
