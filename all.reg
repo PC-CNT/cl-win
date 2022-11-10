@@ -139,3 +139,7 @@ Windows Registry Editor Version 5.00
 ;       「ウインドウのスナップ」を無効化
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "WindowArrangementActive"="0"
+
+;       Disable path length limit
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=dword:00000001
