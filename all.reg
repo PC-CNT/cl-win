@@ -143,3 +143,7 @@ Windows Registry Editor Version 5.00
 ;       Disable path length limit
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
 "LongPathsEnabled"=dword:00000001
+
+;       USB selective suspend を表示
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\48e6b7a6-50f5-4782-a5d4-53bb8f07e226]
+"Attributes"=dword:00000002
