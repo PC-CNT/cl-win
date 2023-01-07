@@ -488,6 +488,7 @@ if %errorlevel% == 1 (
     sc stop Diagtrack
     sc delete Diagtrack
     sc stop dmwappushservice
+    sc delete dmwappushservice
     pause
 )
 
@@ -507,6 +508,7 @@ echo:      ・pipのキャッシュを削除
 echo:      ・C:\\Windows\servicing\LCU\以下を削除
 echo:      ・Dism.exeでのクリーンアップ
 echo:      ・.gradleのキャッシュを削除
+echo:      ・Electron製アプリのキャッシュ等を削除（Teams,VSCode等）
 echo:      
 echo:      
 choice > nul
@@ -525,9 +527,21 @@ if %errorlevel% == 1 (
 
     rmdir /s /q C:\\Windows\servicing\LCU\
 
-    Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+    Dism.exe /online /Cleanup-Image /StartComponentCleanup
 
     rmdir /s /q %USERPROFILE%\.gradle\caches
+
+    rmdir /s /q "%appdata%\Microsoft\Teams\Cache"
+    rmdir /s /q "%appdata%\Microsoft\Teams\Service Worker"
+    rmdir /s /q "%appdata%\Microsoft\Teams\Session Storage"
+    rmdir /s /q "%appdata%\Microsoft\Code\Cache"
+    rmdir /s /q "%appdata%\Microsoft\Code\Service Worker"
+    rmdir /s /q "%appdata%\Microsoft\Code\Session Storage"
+    rmdir /s /q "%appdata%\Microsoft\Code - Insiders\Cache"
+    rmdir /s /q "%appdata%\Microsoft\Code - Insiders\Service Worker"
+    rmdir /s /q "%appdata%\Microsoft\Code - Insiders\Session Storage"
+
+
 
 )
 
