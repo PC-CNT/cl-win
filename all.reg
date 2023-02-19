@@ -83,6 +83,12 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc]
 "Start"=dword:00000004
 
+;       %Userprofile%\Downloadsのグループ表示を無効化
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{885A186E-A440-4ADA-812B-DB871B942259}]
+"Mode"=dword:00000004
+"GroupView"=dword:00000000
+
 ;       ↓↓↓ここからコンテキストメニュー関連
 
 ;       「ペイント3Dで編集」を削除
