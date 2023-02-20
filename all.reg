@@ -88,6 +88,9 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{885A186E-A440-4ADA-812B-DB871B942259}]
 "Mode"=dword:00000004
 "GroupView"=dword:00000000
+"LogicalViewMode"=dword:00000001
+"Sort"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,30,f1,\
+25,b7,ef,47,1a,10,a5,f1,02,60,8c,9e,eb,ac,0a,00,00,00,01,00,00,00
 
 ;       ↓↓↓ここからコンテキストメニュー関連
 
