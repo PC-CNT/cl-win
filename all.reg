@@ -198,6 +198,8 @@ Windows Registry Editor Version 5.00
 ;       「クイック アクセスにピン留め」を削除
 [-HKEY_CLASSES_ROOT\*\shell\pintohomefile]
 [-HKEY_CLASSES_ROOT\Folder\shell\pintohome]
+[-HKEY_CLASSES_ROOT\Drive\shell\pintohome]
+[-HKEY_CLASSES_ROOT\Network\shell\pintohome]
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\pintohome]
 
 ;       「スタートメニューにピン留め」を削除
@@ -219,5 +221,11 @@ Windows Registry Editor Version 5.00
 ;       「VLCで再生」「VLCのプレイリストに追加」を削除
 [-HKEY_CLASSES_ROOT\Directory\shell\AddToPlaylistVLC]
 [-HKEY_CLASSES_ROOT\Directory\shell\PlayWithVLC]
+
+;        「MEGAにアップロード」を削除
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\MEGA (Context menu)]
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MEGA (Context menu)]
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\MEGA (Context menu)]
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\MEGA (Context menu)]
 
 ;       ↑↑ここまでコンテキストメニュー関連
