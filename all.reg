@@ -129,6 +129,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.heic\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.heifs\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.heif\Shell\setdesktopwallpaper]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.hif\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.jfif\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\Shell\setdesktopwallpaper]
