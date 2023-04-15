@@ -98,6 +98,12 @@ Windows Registry Editor Version 5.00
 ;       エクスプローラーのドライブ重複表示を無効化 戻すなら@="Removable Drives"
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\DelegateFolders\{F5FB2C77-0E2F-4A16-A381-3E560C68BC83}]
 
+;        サムネイルのキャッシュ削除を無効化
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
+"Autorun"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
+"Autorun"=dword:00000000
+
 ;       ↓↓↓ここからコンテキストメニュー関連
 
 ;       「ペイント3Dで編集」を削除
@@ -232,5 +238,14 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MEGA (Context menu)]
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\MEGA (Context menu)]
 [-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\MEGA (Context menu)]
+
+;        ~~「Extract All」を削除~~できなかった
+; [-HKEY_CLASSES_ROOT\CLSID\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
+; [-HKEY_CLASSES_ROOT\CompressedFolder\ShellEx\ContextMenuHandlers\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
+; [-HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\shellex\ContextMenuHandlers\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
+; [-HKEY_CLASSES_ROOT\WOW6432Node\CLSID\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
+; [-HKEY_CLASSES_ROOT\CLSID\{888DCA60-FC0A-11CF-8F0F-00C04FD7D062}]
+; [-HKEY_CLASSES_ROOT\WOW6432Node\CLSID\{888DCA60-FC0A-11CF-8F0F-00C04FD7D062}]
+
 
 ;       ↑↑ここまでコンテキストメニュー関連
