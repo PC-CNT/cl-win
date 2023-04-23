@@ -104,6 +104,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
 "Autorun"=dword:00000000
 
+;       %appdata%\Microsoft\Windows\Recentに記録させない
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoRecentDocsHistory"=dword:00000001
+
 ;       ↓↓↓ここからコンテキストメニュー関連
 
 ;       「ペイント3Dで編集」を削除
