@@ -108,6 +108,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoRecentDocsHistory"=dword:00000001
 
+;       別のプロセスでフォルダーウィンドウを開くを有効化
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"SeparateProcess"=dword:00000001
+
 ;       ↓↓↓ここからコンテキストメニュー関連
 
 ;       「ペイント3Dで編集」を削除
