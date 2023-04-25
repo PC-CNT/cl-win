@@ -183,6 +183,7 @@ Windows Registry Editor Version 5.00
 
 ;       「Dropboxに移動」を非表示
 ;       https://www.dropboxforum.com/t5/Integrations/How-to-remove-an-transfer-option-from-context-menu-windows-11/td-p/567340
+;       HKEY_CLASSES_ROOT\PackagedCom\Package\
 [-HKEY_CLASSES_ROOT\SOFTWARE\Classes\*\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\DropboxExt]
