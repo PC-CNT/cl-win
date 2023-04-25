@@ -113,6 +113,18 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "SeparateProcess"=dword:00000001
 
+;       「新機能とおすすめを確認するために、更新の後と、サインイン時にときどき、[Windowsへようこそ]の情報を表示する」を無効化
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-310093Enabled"=dword:00000000
+
+;       "Let's Finish Setting up Your Device"のアレ
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\CloudContent]
+"DisableWindowsSpotlightWindowsWelcomeExperience"=dword:00000001
+
+;       「Windows を使う上でのヒントやお勧めの方法を取得する」を無効化
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-338389Enabled"=dword:00000000
+
 ;       ↓↓↓ここからコンテキストメニュー関連
 
 ;       「ペイント3Dで編集」を削除
