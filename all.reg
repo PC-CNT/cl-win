@@ -220,9 +220,14 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}"=""
 
-;       「印刷」を非表示
-[HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print]
-"LegacyDisable"=""
+;       「印刷」を非表示 "LegacyDisable"=""
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print]
+[-HKEY_CLASSES_ROOT\batfile\shell\print]
+[-HKEY_CLASSES_ROOT\cmdfile\shell\print]
+[-HKEY_CLASSES_ROOT\docxfile\shell\print]
+[-HKEY_CLASSES_ROOT\JSFile\Shell\Print]
+[-HKEY_CLASSES_ROOT\textfile\shell\print]
+[-HKEY_CLASSES_ROOT\txtfile\shell\print]
 
 ;       「ライブラリに追加」を削除
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\Library Location]
