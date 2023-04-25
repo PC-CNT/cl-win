@@ -185,9 +185,12 @@ Windows Registry Editor Version 5.00
 ;       https://www.dropboxforum.com/t5/Integrations/How-to-remove-an-transfer-option-from-context-menu-windows-11/td-p/567340
 ;       HKEY_CLASSES_ROOT\PackagedCom\Package\
 [-HKEY_CLASSES_ROOT\SOFTWARE\Classes\*\shellex\ContextMenuHandlers\DropboxExt]
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\lnkfile\shellex\ContextMenuHandlers\DropboxExt]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{ECD97DE5-3C8F-4ACB-AEEE-CCAB78F7711C}"=""
 
 ;       「以前のバージョンの復元」を非表示
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
