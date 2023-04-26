@@ -225,9 +225,14 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\batfile\shell\print]
 [-HKEY_CLASSES_ROOT\cmdfile\shell\print]
 [-HKEY_CLASSES_ROOT\docxfile\shell\print]
+[-HKEY_CLASSES_ROOT\inffile\shell\print]
+[-HKEY_CLASSES_ROOT\InternetShortcut\shell\print]
 [-HKEY_CLASSES_ROOT\JSFile\Shell\Print]
+[-HKEY_CLASSES_ROOT\odtfile\shell\print]
 [-HKEY_CLASSES_ROOT\textfile\shell\print]
 [-HKEY_CLASSES_ROOT\txtfile\shell\print]
+[-HKEY_CLASSES_ROOT\VBEFile\Shell\Print]
+[-HKEY_CLASSES_ROOT\VBSFile\Shell\Print]
 
 ;       「ライブラリに追加」を削除
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\Library Location]
