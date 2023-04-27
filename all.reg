@@ -227,6 +227,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\docxfile\shell\print]
 [-HKEY_CLASSES_ROOT\inffile\shell\print]
 [-HKEY_CLASSES_ROOT\InternetShortcut\shell\print]
+[-HKEY_CLASSES_ROOT\JSEFile\Shell\Print]
 [-HKEY_CLASSES_ROOT\JSFile\Shell\Print]
 [-HKEY_CLASSES_ROOT\odtfile\shell\print]
 [-HKEY_CLASSES_ROOT\textfile\shell\print]
