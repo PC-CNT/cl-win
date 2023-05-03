@@ -105,9 +105,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
 "Autorun"=dword:00000000
 
-;       %appdata%\Microsoft\Windows\Recentに記録させない
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
-"NoRecentDocsHistory"=dword:00000001
+;       %appdata%\Microsoft\Windows\Recentに記録させない https://superuser.com/questions/1031638/disable-recent-files-in-windows-10
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+; "NoRecentDocsHistory"=dword:00000001
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_TrackDocs"=dword:00000000
 
 ;       別のプロセスでフォルダーウィンドウを開くを有効化
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
