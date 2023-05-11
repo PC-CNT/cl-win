@@ -135,6 +135,12 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
 "NoLockScreen"=dword:00000001
 
+;    Disable Shift Lock
+[HKEY_CURRENT_USER\Software\Microsoft\TabletTip\1.7]
+"EnableShiftLock"=dword:00000000
+[HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
+"Flags"="0"
+
 ;    ↓↓↓ここからコンテキストメニュー関連
 
 ;    「ペイント3Dで編集」を削除
