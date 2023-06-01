@@ -23,6 +23,8 @@ Windows Registry Editor Version 5.00
 "NeverShowExt"=-
 [HKEY_CLASSES_ROOT\SHCmdFile]
 "NeverShowExt"=-
+[HKEY_CLASSES_ROOT\SearchConnectorFolder]
+"NeverShowExt"=-
 
 ;    UACの暗転を消す
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
