@@ -155,6 +155,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate]
 "CreateDesktopShortcutDefault"=dword:00000000
 
+;   ファイル転送のウインドウで詳細情報を表示
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager]
+"EnthusiastMode"=dword:00000001
+
 ;    ↓↓↓ここからコンテキストメニュー関連
 
 ;    「ペイント3Dで編集」を削除
