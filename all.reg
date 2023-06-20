@@ -159,6 +159,10 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager]
 "EnthusiastMode"=dword:00000001
 
+;   「すべての項目にこれを実行する」にチェックをつける（？）
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager]
+"ConfirmationCheckBoxDoForAll"=dword:00000001
+
 ;    ↓↓↓ここからコンテキストメニュー関連
 
 ;    「ペイント3Dで編集」を削除
