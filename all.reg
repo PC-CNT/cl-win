@@ -328,6 +328,14 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\MEGA (Context menu)]
 [-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\MEGA (Context menu)]
 
+;   「Open Git GUI here」を削除
+[-HKEY_CLASSES_ROOT\Directory\shell\git_gui]
+[-HKEY_CLASSES_ROOT\Directory\shell\git_shell]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\git_gui]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\git_shell]
+[-HKEY_CLASSES_ROOT\LibraryFolder\background\shell\git_gui]
+[-HKEY_CLASSES_ROOT\LibraryFolder\background\shell\git_shell]
+
 ;    ~~「Extract All」を削除~~できなかった
 ; [-HKEY_CLASSES_ROOT\CLSID\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
 ; [-HKEY_CLASSES_ROOT\CompressedFolder\ShellEx\ContextMenuHandlers\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
