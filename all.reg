@@ -167,7 +167,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager]
 "ConfirmationCheckBoxDoForAll"=dword:00000001
 
-;   Prefetchをアプリケーションのみ有効にする
+;   Prefetchをアプリケーションのみ有効にする 0:無効,1:アプリケーションのみ,2:ブートのみ,3:両方有効
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
 "EnablePrefetcher"=dword:00000001
 
