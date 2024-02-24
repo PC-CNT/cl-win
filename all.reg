@@ -393,5 +393,7 @@ Windows Registry Editor Version 5.00
 ; [-HKEY_CLASSES_ROOT\CLSID\{888DCA60-FC0A-11CF-8F0F-00C04FD7D062}]
 ; [-HKEY_CLASSES_ROOT\WOW6432Node\CLSID\{888DCA60-FC0A-11CF-8F0F-00C04FD7D062}]
 
+;   新規作成からショートカットの作成を削除
+[-HKEY_CLASSES_ROOT\.lnk\ShellNew]
 
 ;    ↑↑ここまでコンテキストメニュー関連
