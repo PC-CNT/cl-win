@@ -401,4 +401,8 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\regfile\shell\edit]
 [-HKEY_CLASSES_ROOT\cmdfile\shell\edit]
 
+;   「Browse with &IrfanView」を削除
+[-HKEY_CLASSES_ROOT\Drive\shell\Browse with &IrfanView]
+[-HKEY_CLASSES_ROOT\Directory\shell\Browse with &IrfanView]
+
 ;    ↑↑ここまでコンテキストメニュー関連
