@@ -396,7 +396,8 @@ Windows Registry Editor Version 5.00
 ;   新規作成からショートカットの作成を削除
 [-HKEY_CLASSES_ROOT\.lnk\ShellNew]
 
-;   テキストファイルをnotepad.exeで開く、編集する項目を削除
-[-HKEY_CLASSES_ROOT\SystemFileAssociations\text\shell]
+;   様々なファイルをnotepad.exeで編集する項目を削除
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\text\shell\edit]
+[-HKEY_CLASSES_ROOT\regfile\shell\edit]
 
 ;    ↑↑ここまでコンテキストメニュー関連
