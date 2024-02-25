@@ -403,6 +403,10 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\text\shell\edit]
 [-HKEY_CLASSES_ROOT\regfile\shell\edit]
 [-HKEY_CLASSES_ROOT\cmdfile\shell\edit]
+[-HKEY_CLASSES_ROOT\batfile\shell\edit]
+[-HKEY_CLASSES_ROOT\WSFFile\Shell\Edit]
+[-HKEY_CLASSES_ROOT\Windows.XamlDocument\shell\edit]
+[-HKEY_CLASSES_ROOT\Windows.Xbap\shell\edit]
 
 ;   PowerShell ISEで編集する項目を削除
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.ps1\Shell\Edit]
