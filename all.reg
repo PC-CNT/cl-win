@@ -407,6 +407,8 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\WSFFile\Shell\Edit]
 [-HKEY_CLASSES_ROOT\Windows.XamlDocument\shell\edit]
 [-HKEY_CLASSES_ROOT\Windows.Xbap\shell\edit]
+[-HKEY_CLASSES_ROOT\VBSFile\Shell\Edit]
+[-HKEY_CLASSES_ROOT\VBEFile\Shell\Edit]
 
 ;   PowerShell ISEで編集する項目を削除
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.ps1\Shell\Edit]
