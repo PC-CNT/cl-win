@@ -1,20 +1,20 @@
 Windows Registry Editor Version 5.00
 
-;    3D オブジェクトの削除
+;   3D オブジェクトの削除
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
 [-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{31C0DD25-9439-4F12-BF41-7FF4EDA38722}\PropertyBag]
 "ThisPCPolicy"="Hide"
 
-;    拡張子表示
+;   拡張子表示
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "HideFileExt"=dword:00000000
 
-;    隠しファイル表示
+;   隠しファイル表示
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "Hidden"=dword:00000001
 
-;    特殊な拡張子の表示
+;   特殊な拡張子の表示
 [HKEY_CLASSES_ROOT\lnkfile]
 "NeverShowExt"=-
 [HKEY_CLASSES_ROOT\IE.AssocFile.URL]
@@ -26,7 +26,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\SearchConnectorFolder]
 "NeverShowExt"=-
 
-;    UACの暗転を消す
+;   UACの暗転を消す
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "ConsentPromptBehaviorAdmin"=dword:00000005
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
@@ -34,7 +34,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "PromptOnSecureDesktop"=dword:00000000
 
-;    ダークモード
+;   ダークモード
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000000
 "SystemUsesLightTheme"=dword:00000000
@@ -42,59 +42,59 @@ Windows Registry Editor Version 5.00
 "AppsUseLightTheme"=dword:00000000
 "SystemUsesLightTheme"=dword:00000000
 
-;    jpegの拡張子を.jfifから.jpgに変更
+;   jpegの拡張子を.jfifから.jpgに変更
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MIME\Database\Content Type\image/jpeg]
 "Extension"=".jpg"
 
-;    高速スタートアップを無効化
+;   高速スタートアップを無効化
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Power]
 "HiberbootEnabled"=dword:00000000
 
-;    Cortanaの無効化
+;   Cortanaの無効化
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
 "AllowCortana"=dword:00000000
 
-;    「Windows Inkワークスペース」を無効化
+;   「Windows Inkワークスペース」を無効化
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace]
 "AllowWindowsInkWorkspace"=dword:00000000
 
-;    「Enhance Pointer Precision」を無効化
+;   「Enhance Pointer Precision」を無効化
 [HKEY_CURRENT_USER\Control Panel\Mouse]
 "MouseSpeed"="0"
 "MouseThreshold1"="0"
 "MouseThreshold2"="0"
 
-;    「ウインドウのスナップ」を無効化
+;   「ウインドウのスナップ」を無効化
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "WindowArrangementActive"="0"
 
-;    Disable path length limit
+;   Disable path length limit
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
 "LongPathsEnabled"=dword:00000001
 
-;    USB selective suspend を表示
+;   USB selective suspend を表示
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\48e6b7a6-50f5-4782-a5d4-53bb8f07e226]
 "Attributes"=dword:00000002
 
-;    Xbox Game Bar（ms-gamingoverlay）をオフ
+;   Xbox Game Bar（ms-gamingoverlay）をオフ
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
 "AppCaptureEnabled"=dword:00000000
 [HKEY_CURRENT_USER\System\GameConfigStore]
 "GameDVR_Enabled"=dword:00000000
 
-;    クイック アクセスを非表示
+;   クイック アクセスを非表示
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 "HubMode"=dword:00000001
 
-;    Disable Delivery Optimization service
+;   Disable Delivery Optimization service
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc]
 "Start"=dword:00000004
 
-;    BagMRU Sizeを70000に
+;   BagMRU Sizeを70000に
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell]
 "BagMRU Size"=dword:00011170
 
-;    %Userprofile%\Downloadsのグループ表示を無効化
+;   %Userprofile%\Downloadsのグループ表示を無効化
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{885A186E-A440-4ADA-812B-DB871B942259}]
 "Mode"=dword:00000004
 "GroupView"=dword:00000000
@@ -102,50 +102,53 @@ Windows Registry Editor Version 5.00
 "Sort"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,30,f1,\
 25,b7,ef,47,1a,10,a5,f1,02,60,8c,9e,eb,ac,0a,00,00,00,01,00,00,00
 
-;    Microsoft Defender SmartScreenを無効化
+;   Microsoft Defender SmartScreenを無効化
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "EnableSmartScreen"=dword:00000000
 
-;    エクスプローラーのドライブ重複表示を無効化 戻すなら@="Removable Drives"
+;   エクスプローラーのドライブ重複表示を無効化 戻すなら@="Removable Drives"
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\DelegateFolders\{F5FB2C77-0E2F-4A16-A381-3E560C68BC83}]
 
-;    サムネイルのキャッシュ削除を無効化
+;   サムネイルのキャッシュ削除を無効化
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
 "Autorun"=dword:00000000
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
 "Autorun"=dword:00000000
 
-;    %appdata%\Microsoft\Windows\Recentに記録させない https://superuser.com/questions/1031638/disable-recent-files-in-windows-10
+;   %appdata%\Microsoft\Windows\Recentに記録させない https://superuser.com/questions/1031638/disable-recent-files-in-windows-10
 ; [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ; "NoRecentDocsHistory"=dword:00000001
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "Start_TrackDocs"=dword:00000000
 
-;    別のプロセスでフォルダーウィンドウを開くを有効化
+;   別のプロセスでフォルダーウィンドウを開くを有効化
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "SeparateProcess"=dword:00000001
 
-;    「新機能とおすすめを確認するために、更新の後と、サインイン時にときどき、[Windowsへようこそ]の情報を表示する」
-;    「Windows を使う上でのヒントやお勧めの方法を取得する」
-;    "Let's finish setting up your device"を無効化
+;   「新機能とおすすめを確認するために、更新の後と、サインイン時にときどき、[Windowsへようこそ]の情報を表示する」
+;   「Windows を使う上でのヒントやお勧めの方法を取得する」
+;   「ときどきスタートメニューにおすすめのアプリを表示する」
+;   "Let's finish setting up your device"を無効化
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
 "SubscribedContent-310093Enabled"=dword:00000000
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
 "SubscribedContent-338389Enabled"=dword:00000000
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-338388Enabled"=dword:00000000
 [HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\CloudContent]
 "DisableWindowsSpotlightWindowsWelcomeExperience"=dword:00000001
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\UserProfileEngagement]
 "ScoobeSystemSettingEnabled"=dword:00000000
 
-;    タスクバーの時計を秒単位で表示（Win10専用）
+;   タスクバーの時計を秒単位で表示（Win10専用）
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "ShowSecondsInSystemClock"=dword:00000001
 
-;    ロック画面を無効化
+;   ロック画面を無効化
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
 "NoLockScreen"=dword:00000001
 
-;    Disable Shift Lock
+;   Disable Shift Lock
 [HKEY_CURRENT_USER\Software\Microsoft\TabletTip\1.7]
 "EnableShiftLock"=dword:00000000
 [HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
@@ -212,9 +215,9 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9596FB26-9850-41fd-AC3E-F7C3C00AFD4B\03680956-93BC-4294-BBA6-4E0F09BB717F]
 "Attributes"=dword:00000002
 
-;    ↓↓↓ここからコンテキストメニュー関連
+;   ↓↓↓ここからコンテキストメニュー関連
 
-;    「ペイント3Dで編集」を削除
+;   「ペイント3Dで編集」を削除
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.3mf\Shell\3D Edit]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\Shell\3D Edit]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.fbx\Shell\3D Edit]
@@ -231,7 +234,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.tiff\Shell\3D Edit]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\Shell\3D Edit]
 
-;    「デスクトップの背景として設定」を削除
+;   「デスクトップの背景として設定」を削除
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.avci\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.avcs\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.avifs\Shell\setdesktopwallpaper]
@@ -253,7 +256,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\Shell\setdesktopwallpaper]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.wdp\Shell\setdesktopwallpaper]
 
-;    Windows Media Player関連のコンテキストメニューを削除
+;   Windows Media Player関連のコンテキストメニューを削除
 [-HKEY_CLASSES_ROOT\WMP11.AssocFile.3G2\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\WMP11.AssocFile.3GP\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\WMP11.AssocFile.ADTS\shell\Enqueue]
@@ -274,15 +277,15 @@ Windows Registry Editor Version 5.00
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\Directory.Image]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\audio]
 
-;    「BitLocker を有効にする」を非表示
+;   「BitLocker を有効にする」を非表示
 [HKEY_CLASSES_ROOT\Drive\shell\encrypt-bde]
 "LegacyDisable"=""
 [HKEY_CLASSES_ROOT\Drive\shell\encrypt-bde-elev]
 "LegacyDisable"=""
 
-;    「Dropboxに移動」を非表示
-;    https://www.dropboxforum.com/t5/Integrations/How-to-remove-an-transfer-option-from-context-menu-windows-11/td-p/567340
-;    HKEY_CLASSES_ROOT\PackagedCom\Package\
+;   「Dropboxに移動」を非表示
+;   https://www.dropboxforum.com/t5/Integrations/How-to-remove-an-transfer-option-from-context-menu-windows-11/td-p/567340
+;   HKEY_CLASSES_ROOT\PackagedCom\Package\
 [-HKEY_CLASSES_ROOT\SOFTWARE\Classes\*\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\DropboxExt]
 [-HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\DropboxExt]
@@ -291,23 +294,23 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{ECD97DE5-3C8F-4ACB-AEEE-CCAB78F7711C}"=""
 
-;    「以前のバージョンの復元」を非表示
+;   「以前のバージョンの復元」を非表示
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{596AB062-B4D2-4215-9F74-E9109B0A8153}"=""
 
-;    「アクセスを許可する」を非表示
+;   「アクセスを許可する」を非表示
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{f81e9010-6ea4-11ce-a7ff-00aa003ca9f6}"=""
 
-;    「回転」を非表示
+;   「回転」を非表示
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{FFE2A43C-56B9-4bf5-9A79-CC6D4285608A}"=""
 
-;    「Cast to Device」を非表示
+;   「Cast to Device」を非表示
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}"=""
 
-;    「印刷」を非表示 "LegacyDisable"=""
+;   「印刷」を非表示 "LegacyDisable"=""
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print]
 [-HKEY_CLASSES_ROOT\batfile\shell\print]
 [-HKEY_CLASSES_ROOT\cmdfile\shell\print]
@@ -337,41 +340,41 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\VBSFile\Shell\Print]
 [-HKEY_CLASSES_ROOT\xhtmlfile\shell\print]
 
-;    「ライブラリに追加」を削除
+;   「ライブラリに追加」を削除
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\Library Location]
 
-;    「送る」を削除
+;   「送る」を削除
 [-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]
 
-;    「クイック アクセスにピン留め」を削除
+;   「クイック アクセスにピン留め」を削除
 [-HKEY_CLASSES_ROOT\*\shell\pintohomefile]
 [-HKEY_CLASSES_ROOT\Folder\shell\pintohome]
 [-HKEY_CLASSES_ROOT\Drive\shell\pintohome]
 [-HKEY_CLASSES_ROOT\Network\shell\pintohome]
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\pintohome]
 
-;    「スタートメニューにピン留め」を削除
+;   「スタートメニューにピン留め」を削除
 [-HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
 [-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
 [-HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]
 
-;    「共有」を削除
+;   「共有」を削除
 [-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing]
 
-;    「Scan with Microsoft Defender」を削除
+;   「Scan with Microsoft Defender」を削除
 [-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\EPP]
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\EPP]
 [-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\EPP]
 
-;    「Visual Studioで開く」を削除
+;   「Visual Studioで開く」を削除
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\AnyCode]
 [-HKEY_CLASSES_ROOT\Directory\shell\AnyCode]
 
-;    「VLCで再生」「VLCのプレイリストに追加」を削除
+;   VLC関連の項目を削除
 [-HKEY_CLASSES_ROOT\Directory\shell\AddToPlaylistVLC]
 [-HKEY_CLASSES_ROOT\Directory\shell\PlayWithVLC]
 
-;    「MEGAにアップロード」を削除
+;   「MEGAにアップロード」を削除
 [-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\MEGA (Context menu)]
 [-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MEGA (Context menu)]
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\MEGA (Context menu)]
@@ -385,7 +388,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\LibraryFolder\background\shell\git_gui]
 [-HKEY_CLASSES_ROOT\LibraryFolder\background\shell\git_shell]
 
-;    ~~「Extract All」を削除~~できなかった
+;   ~~「Extract All」を削除~~できなかった
 ; [-HKEY_CLASSES_ROOT\CLSID\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
 ; [-HKEY_CLASSES_ROOT\CompressedFolder\ShellEx\ContextMenuHandlers\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
 ; [-HKEY_CLASSES_ROOT\SystemFileAssociations\.zip\shellex\ContextMenuHandlers\{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}]
@@ -420,4 +423,4 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.stl\Shell\3D Print]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.wrl\Shell\3D Print]
 
-;    ↑↑ここまでコンテキストメニュー関連
+;   ↑↑ここまでコンテキストメニュー関連
