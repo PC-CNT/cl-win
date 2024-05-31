@@ -215,6 +215,13 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9596FB26-9850-41fd-AC3E-F7C3C00AFD4B\03680956-93BC-4294-BBA6-4E0F09BB717F]
 "Attributes"=dword:00000002
 
+
+;   検索ボックスでのweb検索を無効化
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"CortanaConsent"=dword:00000000
+"BingSearchEnabled"=dword:00000000
+
+
 ;   ↓↓↓ここからコンテキストメニュー関連
 
 ;   「ペイント3Dで編集」を削除
