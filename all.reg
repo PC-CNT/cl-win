@@ -218,6 +218,10 @@ Windows Registry Editor Version 5.00
 [-HKEY_CURRENT_USER\SOFTWARE\Classes\WOW6432Node\CLSID\{18701C81-34AB-498E-8C7F-5D26B9C36732}]
 [-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{18701C81-34AB-498E-8C7F-5D26B9C36732}]
 
+;   エクスプローラーのナビゲーションウインドウにゴミ箱を追加
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}]
+"System.IsPinnedToNameSpaceTree"=dword:00000001
+
 ;   Add "When sharing media" in Power Options
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9596FB26-9850-41fd-AC3E-F7C3C00AFD4B\03680956-93BC-4294-BBA6-4E0F09BB717F]
 "Attributes"=dword:00000002
