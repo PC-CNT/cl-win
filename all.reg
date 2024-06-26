@@ -213,6 +213,11 @@ Windows Registry Editor Version 5.00
 ;   エクスプローラーから百度网盘の項目を削除
 [-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{679F137C-3162-45da-BE3C-2F9C3D093F64}]
 
+;   エクスプローラーから百度网盘同步空间の項目を削除
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{18701C81-34AB-498E-8C7F-5D26B9C36732}]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\WOW6432Node\CLSID\{18701C81-34AB-498E-8C7F-5D26B9C36732}]
+[-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{18701C81-34AB-498E-8C7F-5D26B9C36732}]
+
 ;   Add "When sharing media" in Power Options
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9596FB26-9850-41fd-AC3E-F7C3C00AFD4B\03680956-93BC-4294-BBA6-4E0F09BB717F]
 "Attributes"=dword:00000002
