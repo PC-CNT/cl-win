@@ -232,6 +232,15 @@ Windows Registry Editor Version 5.00
 "CortanaConsent"=dword:00000000
 "BingSearchEnabled"=dword:00000000
 
+;   電源オプションにプロセッサの電源管理->プロセッサの最大周波数を追加
+;   https://redd.it/vphxz0/
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\75b0ae3f-bce0-45a7-8c89-c9611c25e100]
+"Attributes"=dword:00000002
+
+;   電源オプションにプロセッサの電源管理->最大のプロセッサの状態を追加
+;   https://phst.hateblo.jp/entry/2018/05/28/100418
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\bc5038f7-23e0-4960-96da-33abaf5935ec]
+"Attributes"=dword:00000002
 
 ;   ↓↓↓ここからコンテキストメニュー関連
 
