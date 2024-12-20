@@ -242,6 +242,12 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\bc5038f7-23e0-4960-96da-33abaf5935ec]
 "Attributes"=dword:00000002
 
+;   アプリケーションと安全でないファイルの起動を有効化（"開いているファイル セキュリティの警告"を消す）
+;   https://admx.help/?Category=Windows_7_2008R2&Policy=Microsoft.Policies.InternetExplorer::IZ_Policy_UnsafeFiles_11&Language=ja-jp
+;   https://learn.microsoft.com/ja-jp/previous-versions/troubleshoot/browsers/security-privacy/ie-security-zones-registry-entries
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3]
+"1806"=dword:00000000
+
 ;   ↓↓↓ここからコンテキストメニュー関連
 
 ;   「ペイント3Dで編集」を削除
