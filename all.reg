@@ -253,6 +253,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested]
 "Enabled"=dword:00000000
 
+;   F1キーのヘルプ表示を無効化
+;   https://superuser.com/questions/1102468/how-do-i-disable-the-f1-help-key-on-windows-10
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win32]
+@=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win64]
+@=""
+
 ;   ↓↓↓ここからコンテキストメニュー関連
 
 ;   「ペイント3Dで編集」を削除
