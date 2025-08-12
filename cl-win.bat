@@ -541,7 +541,7 @@ if %errorlevel% == 1 (
     rmdir /s /q "%appdata%\Microsoft\Code - Insiders\Service Worker"
     rmdir /s /q "%appdata%\Microsoft\Code - Insiders\Session Storage"
 
-
+    rmdir /s /q "%localappdata%\Nuitka\Cache"
 
 )
 
