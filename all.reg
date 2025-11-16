@@ -272,6 +272,7 @@ Windows Registry Editor Version 5.00
 "MenuShowDelay"="10"
 
 ;   自動再生無効化
+;   https://learn.microsoft.com/ja-jp/windows/win32/shell/autoplay-reg
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoDriveTypeAutoRun"=dword:000000ff
 
