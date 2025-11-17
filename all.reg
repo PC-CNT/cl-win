@@ -266,6 +266,12 @@ Windows Registry Editor Version 5.00
 "NoAutoUpdate"=dword:1
 "NoAutoRebootWithLoggedOnUsers"=dword:1
 
+;   22H2で固定
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"TargetReleaseVersion"=dword:00000001
+"TargetReleaseVersionInfo"="22H2"
+"ProductVersion"="Windows 10"
+
 ;   Change Menu Show Delay
 ;   https://www.tenforums.com/tutorials/14428-change-menu-show-delay-time-windows-10-a.html
 [HKEY_CURRENT_USER\Control Panel\Desktop]
