@@ -1,3 +1,3 @@
-# cl-win
+# dotfiles（仮）
 
 某Scriptの~~パク~~リスペクトです
