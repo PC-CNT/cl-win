@@ -281,6 +281,8 @@ Windows Registry Editor Version 5.00
 ;   https://learn.microsoft.com/ja-jp/windows/win32/shell/autoplay-reg
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoDriveTypeAutoRun"=dword:000000ff
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoDriveTypeAutoRun"=dword:000000ff
 
 ;   ↓↓↓ここからコンテキストメニュー関連
 
