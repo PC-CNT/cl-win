@@ -116,8 +116,8 @@ Windows Registry Editor Version 5.00
 "Autorun"=dword:00000000
 
 ;   %appdata%\Microsoft\Windows\Recentに記録させない https://superuser.com/questions/1031638/disable-recent-files-in-windows-10
-; [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
-; "NoRecentDocsHistory"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoRecentDocsHistory"=dword:00000001
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "Start_TrackDocs"=dword:00000000
 
