@@ -313,6 +313,10 @@ Windows Registry Editor Version 5.00
 "ACSettingIndex"=dword:00000000
 "DCSettingIndex"=dword:00000000
 
+;   CrashDumpsの作成を無効化
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+
 ;   ↓↓↓ここからコンテキストメニュー関連
 
 ;   「ペイント3Dで編集」を削除
