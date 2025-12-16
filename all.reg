@@ -314,6 +314,7 @@ Windows Registry Editor Version 5.00
 "DCSettingIndex"=dword:00000000
 
 ;   CrashDumpsの作成を無効化
+;   https://kagasu.hatenablog.com/entry/2019/12/01/072247
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
 "Disabled"=dword:00000001
 
