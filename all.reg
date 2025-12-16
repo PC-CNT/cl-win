@@ -308,6 +308,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\WOW6432Node\CLSID\{BDEADE7F-C265-11D0-BCED-00A0C90AB50F}\Instance]
 "Dontrefresh"=hex(b):00,00,00,00,00,00,00,00
 
+;   https://www.tenforums.com/tutorials/69741-change-default-action-power-button-windows-10-a.html
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings\7648EFA3-DD9C-4E3E-B566-50F929386280]
+"ACSettingIndex"=dword:00000000
+"DCSettingIndex"=dword:00000000
+
 ;   ↓↓↓ここからコンテキストメニュー関連
 
 ;   「ペイント3Dで編集」を削除
